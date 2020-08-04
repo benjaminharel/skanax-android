@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleMapView">
+        <attr name="circleColor" format="color" />
+        <attr name="circleLabel" format="string"></attr>
+        <attr name="labelColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="fill_color" format="color" />
+        <attr name="border_color" format="color" />
+        <attr name="border_width" format="dimension" />
+    </declare-styleable>
+</resources>

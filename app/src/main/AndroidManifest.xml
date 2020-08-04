@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="co.thenets.brisk"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Needed for AppsFlyer SDK -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- Needed for Zooz payments SDK -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!-- Needed for card IO -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+
+    <!-- Permissions needed to receive sms -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <!-- GCM permissions -->
+    <!-- let the application keep the processor from sleeping when a message is received -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- permission so the Android application can register and receive messages -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>
+
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="${applicationId}.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name=".general.BriskApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CustomerMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activities.BecomeBriskerActivity"
+            android:parentActivityName=".activities.CustomerMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.CustomerMainActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.StoreMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".activities.BarcodeActivity"
+            android:label="@string/readbarcode"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.CartActivity"
+            android:label="@string/title_activity_cart"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".activities.StoreActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".activities.NoInternetActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.ReceiptActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.PayActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.AddNewProductActivity"
+            android:label="@string/title_activity_add_product"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activities.UserProfileActivity"
+            android:parentActivityName=".activities.CustomerMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:parentActivityName=".activities.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".activities.CustomerOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.StoreOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.CropActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.StoreProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.SubcategoriesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Explode">
+        </activity>
+        <activity
+            android:name=".activities.ActiveProductsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Explode">
+        </activity>
+        <activity
+            android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlideIn"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".activities.OrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlideIn">
+        </activity>
+        <activity
+            android:name=".activities.AppInfoActivity"
+            android:label="@string/title_activity_app_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlideIn">
+        </activity>
+        <activity
+            android:name=".activities.GetAddressAndPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+            android:name=".activities.StoreIntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Intro"
+            tools:ignore="UnusedAttribute">
+        </activity>
+        <activity
+            android:name=".activities.MagnifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Explode">
+        </activity>
+        <activity
+            android:name=".activities.CCFormActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Explode"/>
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <service
+            android:name=".services.UpdateLocationService"
+            android:exported="false"/>
+        <service
+            android:name=".services.FetchAddressIntentService"
+            android:exported="false"/>
+        <service
+            android:name=".services.CheckIfInTLVIntentService"
+            android:exported="false"/>
+
+        <receiver
+            android:name="com.appsflyer.MultipleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".gcm.AppGcmIntentReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+                <categoryCode android:name="${applicationId}"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcasts.NetworkStateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.ads.conversiontracking.InstallReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

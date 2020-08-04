@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/hashtagTextView"
+        fontPath="fonts/opensans_regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/hashtag_pink"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/sample_hashtag"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/grid_product_item_name_font_size"/>
+
+</LinearLayout>

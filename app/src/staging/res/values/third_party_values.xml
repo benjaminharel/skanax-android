@@ -1,0 +1,10 @@
+<resources>
+    <!--Run this code to get the SHA1 code-->
+    <!--keytool -list -v -keystore C:\Users\[PC-NAME]\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android-->
+
+    <!--David's Debug key-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC0D5LDBjiMJGJlIIghCGZX76hG3XV-Kg0</string>
+
+    <!--Facebook app id for events analytics-->
+    <string name="facebook_app_id" translatable="false">1772501052981867</string>
+</resources>

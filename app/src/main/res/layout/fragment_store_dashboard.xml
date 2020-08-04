@@ -1,0 +1,523 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".fragments.SetPaymentMethodFragment"
+    tools:ignore="MissingPrefix">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/fab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            android:elevation="@dimen/toolbar_elevation"/>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple_white_background_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="20dp"
+                    tools:ignore="MissingPrefix">
+
+                    <TextView
+                        android:id="@+id/storeStateTextView"
+                        fontPath="fonts/opensans_regular.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/store_open"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/dashboard_section_title"/>
+
+                    <Switch
+                        android:id="@+id/storeActiveNotActiveSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_income"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bg_ripple_white_background_rounded"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        tools:ignore="MissingPrefix">
+
+                        <TextView
+                            fontPath="fonts/opensans_regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="@string/income"
+                            android:textColor="@color/dashboard_income"
+                            android:textSize="@dimen/dashboard_section_title"/>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="0dp"
+                                      android:layout_weight="1"
+                                      android:orientation="vertical">
+
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="0dp"
+                                          android:layout_weight="1"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/daily"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/dailyIncomeTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/price_value"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="0dp"
+                                          android:layout_weight="1"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/monthly"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/monthlyIncomeTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/price_value"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/orderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ripple_white_background_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_orders"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/bg_ripple_white_background_rounded"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        tools:ignore="MissingPrefix">
+
+                        <TextView
+                            fontPath="fonts/opensans_regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/orders"
+                            android:textColor="@color/dashboard_orders"
+                            android:textSize="@dimen/dashboard_section_title"/>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:orientation="vertical">
+
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/new_orders"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/newOrdersTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="0"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/in_progress"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/inProgressOrdersTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="0"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/finished"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/finishedOrdersTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="0"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:gravity="center"
+                                          android:orientation="horizontal">
+
+                                <TextView
+                                    fontPath="fonts/opensans_regular.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/total"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"/>
+
+                                <TextView
+                                    android:id="@+id/totalOrdersTextView"
+                                    fontPath="fonts/opensans_bold.ttf"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="0"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="@dimen/dashboard_section_subtitle"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/deliveryPriceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple_white_background_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:src="@drawable/ic_delivery_scooter"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        tools:ignore="MissingPrefix">
+
+                        <TextView
+                            fontPath="fonts/opensans_regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="@string/delivery_price"
+                            android:textColor="@color/dashboard_delivery"
+                            android:textSize="@dimen/dashboard_section_title"/>
+
+                        <TextView
+                            android:id="@+id/deliveryPriceTextView"
+                            fontPath="fonts/opensans_bold.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/price_value"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/dashboard_section_subtitle"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/workingRadiusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple_white_background_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:src="@drawable/ic_radius"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        tools:ignore="MissingPrefix">
+
+                        <TextView
+                            fontPath="fonts/opensans_regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="@string/working_area"
+                            android:textColor="@color/dashboard_radius"
+                            android:textSize="@dimen/dashboard_section_title"/>
+
+                        <TextView
+                            android:id="@+id/workingRadiusTextView"
+                            fontPath="fonts/opensans_bold.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radius_distance"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/dashboard_section_subtitle"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:orientation="horizontal"
+                              android:padding="16dp">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/CustomRatingBarBig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"/>
+
+                    <TextView
+                        android:id="@+id/reviewsCounterTextView"
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/number_of_reviews"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_white_2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

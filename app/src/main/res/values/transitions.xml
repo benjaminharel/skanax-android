@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tr_image_view" translatable="false">transition:IMAGE_VIEW</string>
+    <string name="tr_category" translatable="false">transition:CATEGORY</string>
+    <string name="tr_toolbar" translatable="false">transition:TOOLBAR</string>
+</resources>

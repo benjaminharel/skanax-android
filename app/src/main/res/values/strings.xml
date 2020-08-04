@@ -1,0 +1,376 @@
+<resources>
+    <string name="app_name">Brisk</string>
+    <string name="cant_open_a_store_without_location_permission_error">Can\'t open a store without
+        Location permission
+    </string>
+    <string name="empty_store_name_error">Please insert Store name</string>
+    <string name="empty_store_email_error">Please insert Store email</string>
+    <string name="invalid_email_error">Invalid email address</string>
+    <string name="empty_store_delivery_price_error">Please insert delivery price</string>
+    <string name="empty_store_geo_location">Please select position and radius</string>
+    <string name="no_location_error">We need your location\nto run properly</string>
+    <string name="no_location_error_description">Enable GPS or Location Services in device or app
+        setting
+    </string>
+    <string name="no_internet_connection_error">No internet connection</string>
+    <string name="google_play_services_error">No valid Google Play Services APK found</string>
+    <string name="cant_delete_item_from_order_error">Error in removing item from order</string>
+    <string name="error_in_getting_categories_from_server">Error in getting categories from server,
+        please try later
+    </string>
+    <string name="error_in_creating_store">Error in creating a shop, please try later</string>
+    <string name="missing_product_name_error">Missing product name</string>
+    <string name="missing_category_error">Missing category</string>
+    <string name="missing_sub_category_error">Missing sub category</string>
+    <string name="missing_product_brand_error">Missing product brand name</string>
+    <string name="missing_product_price_error">Missing product price</string>
+    <string name="missing_product_image_error">Missing product image</string>
+    <string name="error_in_getting_items_for_sale">Some error occurred in getting items for sale, please try again</string>
+    <string name="min_price_error">Min order price for this store is: %s₪</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="what_do_you_need">What do you need?</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="my_orders">My Orders</string>
+    <string name="items_for_sale">Items for sale</string>
+    <string name="working_area">Working area</string>
+    <string name="opening_hours">Opening hours</string>
+    <string name="app_info">App Info</string>
+    <string name="customer_service_247">Customer Service 24/7</string>
+    <string name="switch_to_customer">Switch To Customer</string>
+    <string name="switch_to_store">Switch To Store</string>
+    <string name="next">Next</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="payment_email">Payment E-mail</string>
+    <string name="delivery_price">Delivery price</string>
+    <string name="become_brisker">Become Brisker</string>
+    <string name="open_a_brisk_shop">Open a Brisk Shop</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="no_items">No items</string>
+    <string name="no_items_for_sale">No items for sale</string>
+    <string name="min_price" formatted="false">Min. %s%s</string>
+    <string name="average_price" formatted="false">Avg. %s%s</string>
+    <string name="your_price">Your price</string>
+    <string name="action_done">Done</string>
+    <string name="add_items_for_sale">Add Items For Sale</string>
+    <string name="shop_items">Shop items</string>
+    <string name="store_details">Store details</string>
+    <string name="store_geo_data_fragment_title">Your shop working area</string>
+    <string name="store_availability_fragment_title">Store availability</string>
+    <string name="store_orders_fragment_title">Store orders</string>
+    <string name="to">To</string>
+
+    <string name="circle_border_color">#6dad57</string>
+    <string name="distance_units">m</string>
+
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+    <string name="filter">Filter</string>
+    <string name="example_category">Example categoryCode</string>
+    <string name="not_implemented_yet">Not implemented yet</string>
+    <string name="product_brand">Product brand</string>
+    <string name="product_name">Product name</string>
+    <string name="currency_sign">₪</string>
+    <string name="sample_name">Sample Longname</string>
+    <string name="sample_hashtag">#CocaCola</string>
+
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="low_storage_error">Barcode detector dependencies cannot be downloaded due to low
+        device storage
+    </string>
+    <string name="no_camera_permission">This application cannot run because it does not have the
+        camera permission. The application will now exit.
+    </string>
+    <string name="product_not_found">Product Not Found</string>
+    <string name="product_found">Product Found!</string>
+    <string name="scan_to_add_product">Scan to Add Product</string>
+    <string name="readbarcode">ReadBarcode</string>
+    <string name="select_your_store_position_and_working_radius">Select your store position and
+        working radius
+    </string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="update_cart">Update cart</string>
+    <string name="add_to_stock">Add to stock</string>
+    <string name="update_price">Update price</string>
+    <string name="cart">Cart</string>
+    <string name="title_activity_cart">Cart Activity</string>
+    <string name="compare_stores">Compare Stores</string>
+    <string name="swipe_to_dismiss">Swipe to dismiss</string>
+    <string name="no_items_in_your_shopping_bag">No items in your shopping bag</string>
+    <string name="select">Select</string>
+    <string name="total_price">Total ₪%s</string>
+    <string name="avg_eta">avg. %d min.</string>
+    <string name="number_of_reviews">%d reviews</string>
+    <string name="eta">%d min.</string>
+    <string name="delivery_price_with_value">Delivery %s₪</string>
+    <string name="available_items_counter" formatted="false">&#8226; %s/%s products \n &#160;&#160;available</string>
+    <string name="all">All</string>
+    <string name="my_shopping">My shopping</string>
+    <string name="delivery">Delivery</string>
+    <string name="price_value">₪%s</string>
+    <string name="radius_distance">%skm</string>
+    <string name="total">Total</string>
+    <string name="order">Order</string>
+    <string name="out_of_stock">Out of stock</string>
+
+    <string name="please_enter_your_mobile_number">Please enter your mobile number</string>
+    <string name="perfix_israel">+972</string>
+    <string name="the_code_is_on_the_way_to">The code is on the way to %s</string>
+    <string name="enter_code_here">Enter code here</string>
+    <string name="havent_received_a_code_yet">Haven\'t received a code yet?</string>
+    <string name="send_me_a_new_code">SEND ME A NEW CODE</string>
+    <string name="create_your_profile">Create your profile</string>
+    <string name="add_your_photo_u0026_name"><![CDATA[Add your photo & name]]></string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">E-mail</string>
+    <string name="lets_s_get_started">LETS\'s GET STARTED</string>
+    <string name="start_timer">01:00</string>
+    <string name="end_timer">00:00</string>
+    <string name="not_a_valid_name">Not a valid name!</string>
+    <string name="not_a_valid_last_name">Not a valid last name!</string>
+    <string name="not_a_valid_phone_number">Not a valid phone number!</string>
+    <string name="not_a_valid_code_number">Not a valid code number!</string>
+    <string name="code_dosn_t_match">Code doesn\'t match!</string>
+
+    <string name="sms_message"><![CDATA[ From : %1$s<br/>%2$s]]></string>
+    <string name="network_problem_please_try_again">Network Problem...Please try again</string>
+    <string name="all_products_available">&#8226; All products \n &#160;&#160;available</string>
+    <string name="store">Store</string>
+    <string name="categories">Categories</string>
+    <string name="categoryCode">Category</string>
+    <string name="subCategoryCode">Subcategory</string>
+    <string name="check_internet_connection">Check internet connection</string>
+    <string name="select_category">Select Category</string>
+    <string name="clear_selection">Clear Selection</string>
+    <string name="order_completed">Your order has been completed</string>
+    <string name="order_failed">Order failed</string>
+    <string name="tip">Tip</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="order_no_x">Order No. #%s</string>
+    <string name="title_activity_add_product">AddProductActivity</string>
+    <string name="subcategories">SubCategories</string>
+    <string name="select_subcategory">Select subcategory</string>
+    <string name="add_product">Add product</string>
+    <string name="product_added">Product added</string>
+    <string name="missing_fields_error">Missing fields</string>
+    <string name="speed">Speed</string>
+    <string name="quality">Quality</string>
+    <string name="messenger">Messenger</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="send_rating">SEND RATING</string>
+    <string name="rate">Rate</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="mailto">mailto:</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="your_profile">Your profile</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="edit_your_profile">Edit Your Profile</string>
+    <string name="cant_create_new_user_error">Can\'t create new user, please try to reopen</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="waiting_for_seller_approval">Waiting for seller approval</string>
+    <string name="in_progress_state">In progress</string>
+    <string name="in_progress">In progress</string>
+    <string name="on_the_way">On the way</string>
+    <string name="delivered">Delivered</string>
+    <string name="customer_address">Customer address</string>
+    <string name="awaiting_approval">Awaiting Approval</string>
+    <string name="approve">Approve</string>
+    <string name="report">Report</string>
+    <string name="order_canceled">Order canceled</string>
+    <string name="canceled">Canceled</string>
+    <string name="pay">Please pay now</string>
+    <string name="cant_delete_last_item_please_cancel_order">Can\'t delete last item, Please cancel
+        order
+    </string>
+    <string name="cant_delete_item_on_this_state">Can\'t delete item on this state</string>
+    <string name="order_paid">Order paid</string>
+    <string name="x_items_out_of_y_items_are_available" formatted="false">%s items out of %s are
+        available
+    </string>
+    <string name="x_item_out_of_y_items_is_available" formatted="false">%s item out of %s is
+        available
+    </string>
+    <string name="rating_succeeded">Rating succeeded</string>
+    <string name="enter_your_rating">Enter your rating</string>
+    <string name="other">Other</string>
+    <string name="the_buyer_cant_be_reached">The buyer can\'t be reached</string>
+    <string name="the_buyer_didnt_pay">The buyer didn\'t pay</string>
+    <string name="description_missing">Description missing</string>
+    <string name="dispute">Dispute</string>
+    <string name="select_option">Select option</string>
+    <string name="min">min</string>
+    <string name="order_items">Order items</string>
+    <string name="category_name">Category name</string>
+    <string name="select_image_source">Select image source</string>
+    <string name="edit_your_profile_and_add_first_and_last_name">Edit your profile and add first and
+        last name
+    </string>
+    <string name="please_register_before_order">Please register before order</string>
+    <string name="register">Register</string>
+    <string name="update">Update</string>
+    <string name="please_register_before_becoming_a_brisker">Please register before becoming a
+        brisker
+    </string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="we_will_send_a_code_to_verify_your_phone">In a few seconds you\'ll receive a
+        confirmation code via text message
+    </string>
+    <string name="complete_registration">Complete Registration</string>
+    <string name="error_in_update_store_availability">Error in update store availability</string>
+    <string name="error_in_update_store_details">Error in update store details</string>
+    <string name="recommended">Recommended</string>
+    <string name="recommended_products">המומלצים ביותר</string>
+    <string name="nothing_found">Sorry, No Results Found</string>
+    <string name="notes">Notes</string>
+    <string name="notes_for_delivery">Notes</string>
+    <string name="title_activity_orders">OrdersActivity</string>
+    <string name="call_us">Call us</string>
+    <string name="email_us">Email us</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_connection_error_description">Unfortunately, this app can\'t work
+        without internet connection
+    </string>
+    <string name="rate_us">Rate Us</string>
+    <string name="share_us">Share Us</string>
+
+    <string name="love_it">Loving it?</string>
+    <string name="we_are_more_than_interested_to_hear_your_opinion_about_our_application">We are
+        more than interested to hear your opinion
+    </string>
+    <string name="thank_you">Thank You!</string>
+    <string name="just_another_minute_of_your_time_please_rate_us_on_the_app_store">Please give us
+        just one more minute of your time and rate us on Google Play
+    </string>
+    <string name="lets_do_it">Let\'s do it!</string>
+    <string name="its_crap">It\'s pure crap!</string>
+    <string name="disliked_it">Dislike it</string>
+    <string name="its_fine">It\'s fine</string>
+    <string name="i_love_it">I love it!</string>
+    <string name="one_of_a_kind">One of a kind</string>
+    <string name="send">Send</string>
+    <string name="check_out_brisk">Check out Brisk\n</string>
+    <string name="no_products_available_error">Sorry, No products available in your area right now
+    </string>
+    <string name="title_activity_app_info">App Info</string>
+    <string name="store_area_updated">Store area updated</string>
+    <string name="product_already_exists_in_your_store">Product already exists in your store
+    </string>
+    <string name="complete_profile_details">Complete profile details</string>
+    <string name="are_you_sure_you_want_to_sign_out">Are you sure you want to Sign out?</string>
+    <string name="are_you_sure_you_want_to_cancel_the_order">Are you sure you want to cancel the
+        order?
+    </string>
+    <string name="thanks_god">Thanks God!</string>
+    <string name="are_you_sure_you_want_to_remove_this_item_from_list">Are you sure you want to
+        remove this item from list?
+    </string>
+    <string name="address">Address</string>
+    <string name="house_number">House number</string>
+    <string name="floor_number">Floor number</string>
+    <string name="apartment_number">Apartment number</string>
+    <string name="city">City</string>
+    <string name="street">Street</string>
+    <string name="not_within_tlv_error">Right now, Brisk support Tel Aviv area only</string>
+    <string name="continue_to_payment">Continue to Payment</string>
+    <string name="set_delivery_address">Set delivery address</string>
+    <string name="change">Change</string>
+    <string name="cc_number">CC Number: %s</string>
+    <string name="expiration_date" formatted="false">Expiration: %s/%s</string>
+    <string name="cvv_number">CVV number: %s</string>
+    <string name="get_payment_method_description">
+        <b>We WON\'T</b>
+        charge you, until you get the delivery and manually select to pay.
+    </string>
+    <string name="set_payment_method">Set payment method</string>
+    <string name="add_manually">Add manually</string>
+    <string name="scan">Scan</string>
+    <string name="card_added">Card added</string>
+    <string name="store_open">Store open</string>
+    <string name="store_closed">Store closed</string>
+    <string name="income">Income</string>
+    <string name="daily">Daily</string>
+    <string name="monthly">Monthly</string>
+    <string name="new_orders">New</string>
+    <string name="set_delivery_price">Set delivery price</string>
+    <string name="save">Save</string>
+    <string name="delivery_price_updated">Delivery price updated</string>
+    <string name="intro_1_title">Open your shop with.\na few easy steps</string>
+    <string name="intro_2_title">Set your weekly schedule</string>
+    <string name="intro_3_title">Set your shop working area</string>
+    <string name="intro_4_title">Start earning money</string>
+    <string name="please_select_payment_method">Please select payment method</string>
+    <string name="more">More</string>
+    <string name="price">Price</string>
+    <string name="checkout">Checkout</string>
+    <string name="error_in_payment_details">Error in your payment details, please try again</string>
+    <string name="there_are_no_items_in_this_category_right_now">No items in this category right
+        now
+    </string>
+    <string name="there_are_no_items_in_this_subcategory_right_now">No items in this subcategory
+        right now
+    </string>
+    <string name="my_shopping_bag">My Shopping Bag</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="terms_and_conditions_brisker">Terms and Conditions - Seller</string>
+    <string name="preferred_method_to_receive_customer_money">Preferred way to receive your
+        payment:
+    </string>
+    <string name="cash">Cash from customer</string>
+    <string name="transfer_from_brisk">Transfer from Brisk</string>
+    <string name="select_preferred_payment_method">Select preferred payment method</string>
+    <string name="pay_cash">Pay Cash</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="paypal">Paypal</string>
+    <string name="store_dosent_supported_this_payment_option">Store doesn\'t support this payment
+        option
+    </string>
+    <string name="did_you_finish_with_adding_new_products">Did you finish with adding new products
+        to your store?
+    </string>
+    <string name="orders">Orders</string>
+    <string name="details">Details</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="exit_app">Exit App</string>
+    <string name="error_in_reporting_customer_please_call_support">An error occurred while reporting
+        a customer, please contact support
+    </string>
+    <string name="add">Add</string>
+    <string name="credit_card_details">Credit Card Details</string>
+    <string name="finished">Finished</string>
+    <string name="how_brisk_app_works">How Brisk App Works?</string>
+    <string name="share_location_and_start">Share location and Get started</string>
+    <string name="select_category_and_search_product">Select category and search for products</string>
+    <string name="add_to_shopping_bag_and_compare_shops">Add to shopping bag and compare shops</string>
+    <string name="order_and_the_products_are_on_the_way">Order, the products are on the way</string>
+    <string name="content">content</string>
+    <string name="paying_with_cash">Paying %s with Cash</string>
+    <string name="paying_with_credit_card">Paying %s with Credit Card</string>
+    <string name="store_name">Store Name</string>
+    <string name="products">Products</string>
+    <string name="enable_location_services">Enable Location Services</string>
+    <string name="we_are_looking_for_available_stores_next_to_you_please_enable_location_services">We need your location in order to find available stores next to you.</string>
+    <string name="searching_for_stores_around_you">Searching for stores around you...</string>
+    <string name="stores">Stores</string>
+    <string name="order_transfer">Order Transfer</string>
+    <string name="order_transfer_description">Transfer the treatment of the order to a messenger, by selecting him from the list of your contacts</string>
+    <string name="closed_now">Closed now</string>
+    <string name="loading_data">Loading Data</string>
+
+
+</resources>

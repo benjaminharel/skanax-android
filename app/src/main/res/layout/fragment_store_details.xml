@@ -1,0 +1,136 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/fab_coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.thenets.brisk.activities.BecomeBriskerActivity"
+    tools:ignore="MissingPrefix">
+
+    <ScrollView
+        android:id="@id/main_layout"
+        android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".fragments.StoreDetailsFragment">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="?attr/actionBarSize"/>
+
+            <ImageView
+                android:id="@+id/croppedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/light_gray"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_place_holder_store"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/storeNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/deliveryPriceEditText"
+                    android:hint="@string/shop_name"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/deliveryPriceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/delivery_price"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/cashCheckBox"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/itemNameTextView"
+                fontPath="fonts/opensans_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/preferred_method_to_receive_customer_money"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="8dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_marginBottom="72dp"
+                          android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cashCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cash"/>
+
+                <CheckBox
+                    android:id="@+id/briskCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/transfer_from_brisk"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/fab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/store_details_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            android:elevation="@dimen/toolbar_elevation"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/store_details_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="fabClick"
+        android:src="@drawable/ic_navigate_next_white_24dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/main_layout"
+        app:layout_anchorGravity="bottom|right"/>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+

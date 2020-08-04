@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "853808865441",
+    "project_id": "brisk-staging"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853808865441:android:472742013d9264ff",
+        "android_client_info": {
+          "package_name": "co.thenets.brisk.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcZY4zRRj7sQHH6qZxQmq8f3AWNNUu710"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-59119125-6"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

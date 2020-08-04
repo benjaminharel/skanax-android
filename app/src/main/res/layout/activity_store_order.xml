@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.CustomerOrderActivity"
+        tools:ignore="MissingPrefix">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/color_primary"
+                android:elevation="@dimen/toolbar_elevation"
+                android:title="@string/title_activity_cart"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/itemContainer"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="3dp">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_place_holder_store"/>
+
+                    <LinearLayout android:layout_width="0dp"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:gravity="center_vertical"
+                                  android:orientation="vertical"
+                                  android:paddingLeft="12dp"
+                                  android:paddingStart="12dp">
+                        <TextView
+                            android:id="@+id/itemNameTextView"
+                            fontPath="fonts/opensans_light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:text="@string/sample_name"
+                            android:paddingRight="4dp"
+                            android:paddingEnd="4dp"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="20sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/paymentMethodImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="4dp"
+                                android:paddingTop="4dp"
+                                android:src="@drawable/ic_paying_credit"/>
+
+                            <TextView
+                                android:id="@+id/paymentMethodTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginStart="4dp"
+                                android:maxLines="1"
+                                android:layout_gravity="center"
+                                android:ellipsize="end"
+                                android:text="@string/paying_with_credit_card"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray"/>
+                    <ImageButton
+                        android:id="@+id/callButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ripple"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_phone"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray"/>
+                    <ImageButton
+                        android:id="@+id/smsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ripple"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_sms"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                    <ImageView android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:padding="12dp"
+                               android:src="@drawable/ic_navigation"/>
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ripple_white_background_rounded"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/customer_address"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="1">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical">
+
+
+                <FrameLayout android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:paddingTop="4dp">
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_marginLeft="40dp"
+                                  android:layout_marginRight="40dp"
+                                  android:gravity="center"
+                                  android:orientation="horizontal">
+                        <View
+                            android:id="@+id/inProgressLineView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/light_gray"/>
+                        <View
+                            android:id="@+id/otwLineView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/light_gray"/>
+                        <View
+                            android:id="@+id/deliveredLineView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/light_gray"/>
+                        <View
+                            android:id="@+id/paidLineView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/light_gray"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="64dp"
+                                  android:orientation="horizontal"
+                                  android:paddingLeft="16dp"
+                                  android:paddingRight="16dp">
+
+                        <FrameLayout android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1">
+                            <co.thenets.brisk.custom.CircleView
+                                android:id="@+id/waitingCircleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                app:border_color="@color/color_primary"
+                                app:border_width="1dp"
+                                app:fill_color="@color/color_primary"/>
+                            <ImageView
+                                android:id="@+id/waitingImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/ic_approval_on"/>
+                        </FrameLayout>
+
+                        <FrameLayout android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1">
+                            <co.thenets.brisk.custom.CircleView
+                                android:id="@+id/inProgressCircleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                app:border_color="@color/light_gray"
+                                app:border_width="1dp"
+                                app:fill_color="@color/background_gray"/>
+                            <ImageView
+                                android:id="@+id/inProgressImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/ic_in_progress_off"/>
+                        </FrameLayout>
+                        <FrameLayout android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1">
+                            <co.thenets.brisk.custom.CircleView
+                                android:id="@+id/otwCircleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                app:border_color="@color/light_gray"
+                                app:border_width="1dp"
+                                app:fill_color="@color/background_gray"/>
+                            <ImageView
+                                android:id="@+id/otwImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+
+                                android:src="@drawable/ic_otw_off"/>
+                        </FrameLayout>
+                        <FrameLayout android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1">
+                            <co.thenets.brisk.custom.CircleView
+                                android:id="@+id/deliveredCircleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                app:border_color="@color/light_gray"
+                                app:border_width="1dp"
+                                app:fill_color="@color/background_gray"/>
+                            <ImageView
+                                android:id="@+id/deliveredImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/ic_delivered_off"/>
+                        </FrameLayout>
+                        <FrameLayout android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_weight="1">
+                            <co.thenets.brisk.custom.CircleView
+                                android:id="@+id/paidCircleView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                app:border_color="@color/light_gray"
+                                app:border_width="1dp"
+                                app:fill_color="@color/background_gray"/>
+                            <ImageView
+                                android:id="@+id/paidImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16dp"
+                                android:src="@drawable/ic_paid_off"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <net.wujingchao.android.view.SimpleTagImageView
+                android:id="@+id/canceledImageView"
+                xmlns:simple="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-4dp"
+                android:src="@drawable/bg_transparent"
+                android:visibility="gone"
+                simple:simple_corner_distance="80dp"
+                simple:simple_tag_background_color="@color/red"
+                simple:simple_tag_orientation="left_top"
+                simple:simple_tag_round_radius="30dp"
+                simple:simple_tag_text="@string/canceled"
+                simple:simple_tag_textColor="@color/white"
+                simple:simple_tag_width="40dp"/>
+
+        </FrameLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/negativeOrderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cornered_error_ripple"
+                android:text="@string/cancel"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/positiveOrderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cornered_ripple"
+                android:text="@string/approve"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_white_2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</FrameLayout>

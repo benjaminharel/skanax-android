@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        fontPath="fonts/opensans_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:text="@string/set_delivery_price"
+        android:textColor="@color/dark_gray"
+        android:textSize="22sp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/deliveryPriceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:hint="@string/delivery_price"
+            android:inputType="number"
+            android:textSize="14sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
+
+
+

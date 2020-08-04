@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/itemImageView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="800dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:transitionName="@string/tr_image_view"
+        android:src="@drawable/ic_place_holder_product"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:orientation="vertical"
+                  tools:ignore="MissingPrefix">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_horizontal"
+                      android:orientation="vertical">
+            <TextView
+                android:id="@+id/itemNameTextView"
+                fontPath="fonts/opensans_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:text="@string/product_name"
+                android:textColor="@color/dark_gray"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/contentTextView"
+                fontPath="fonts/opensans_light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:maxLines="1"
+                android:text="1.5L"
+                android:textColor="@color/dark_gray"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/itemBrandTextView"
+                fontPath="fonts/opensans_light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:maxLines="1"
+                android:text="@string/product_brand"
+                android:textColor="@color/gray"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/itemMarketPriceTextView"
+                fontPath="fonts/opensans_bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/min_price"
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notesTextView"
+            fontPath="fonts/opensans_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:maxLines="4"
+            android:gravity="center"
+            android:text="@string/notes"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="4dp"
+            android:background="@color/background_gray"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            tools:ignore="MissingPrefix">
+
+            <LinearLayout
+                android:id="@+id/quantityView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/removeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple_cornered"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/ic_remove"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/itemQuantityTextView"
+                    fontPath="fonts/opensans_bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="1"
+                    android:textColor="@color/gray"
+                    android:textSize="24sp"/>
+
+                <ImageButton
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple_cornered"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/ic_add"
+                    android:textSize="24sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/priceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    fontPath="fonts/opensans_bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/your_price"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/storePrice"
+                    fontPath="fonts/opensans_bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:text="9.9"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    fontPath="fonts/opensans_bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/currency_sign"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/actionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_cornered_ripple"
+            android:minHeight="0dp"
+            android:padding="12dp"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+            android:visibility="gone"
+        />
+    </LinearLayout>
+</LinearLayout>
+
+
+

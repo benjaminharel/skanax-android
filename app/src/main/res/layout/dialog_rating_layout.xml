@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/light_blue"
+                  android:gravity="center"
+                  android:paddingTop="40dp"
+                  android:paddingBottom="40dp"
+                  android:paddingLeft="8dp"
+                  android:paddingRight="8dp"
+                  android:layout_marginBottom="16dp"
+                  android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_delivery_completed"/>
+
+        <TextView
+            fontPath="fonts/opensans_light.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:text="@string/order_completed"
+            android:textColor="@color/color_primary"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            fontPath="fonts/opensans_light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:text="@string/rate"
+            android:textColor="@color/dark_gray"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            fontPath="fonts/opensans_bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/shop_name"
+            android:textColor="@color/dark_gray"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CustomRatingBarBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"/>
+
+</LinearLayout>
+
+
+

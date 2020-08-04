@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "121074648564",
+    "project_id": "brisk-development"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121074648564:android:dd08e979ae9535db",
+        "android_client_info": {
+          "package_name": "co.thenets.brisk.development"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqHvnscPacY6XoGrzEBSta3BZYw7xntWU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-59119125-7"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,149 @@
+apply from: 'keystore.gradle'
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+        }
+    }
+    flavorDimensions "default"
+
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId "co.thenets.brisk"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 17
+        versionName "1.0.7"
+        // Enabling multi dex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig null
+        }
+    }
+    signingConfigs {
+        development {
+            storeFile file(development_keystore_file_location)
+            storePassword development_keystore_password
+            keyAlias development_alias
+            keyPassword development_alias_password
+        }
+        staging {
+            storeFile file(staging_keystore_file_location)
+            storePassword staging_keystore_password
+            keyAlias staging_alias
+            keyPassword staging_alias_password
+        }
+        production {
+            storeFile file(production_keystore_file_location)
+            storePassword production_keystore_password
+            keyAlias production_alias
+            keyPassword production_alias_password
+        }
+    }
+    productFlavors {
+        development {
+            signingConfig signingConfigs.development
+            applicationId defaultConfig.applicationId + ".development"
+            versionName defaultConfig.versionName + "-development"
+        }
+
+        staging {
+            signingConfig signingConfigs.staging
+            applicationId defaultConfig.applicationId + ".staging"
+            versionName defaultConfig.versionName + "-staging"
+        }
+
+        production {
+            signingConfig signingConfigs.production
+        }
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.google.android.gms:play-services-maps:9.0.1'
+    compile 'com.google.android.gms:play-services-location:9.0.1'
+    compile 'com.google.android.gms:play-services-gcm:9.0.1'
+    compile 'com.google.android.gms:play-services-vision:9.0.1'
+    compile 'com.google.android.gms:play-services-analytics:9.0.1'
+    compile 'com.google.firebase:firebase-core:9.0.1'
+    compile 'com.google.firebase:firebase-crash:9.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha2'
+
+    compile 'com.android.support:multidex:1.0.1'
+    compile name: 'GoogleConversionTrackingSdk-2.2.4'
+    compile name: 'zooz-ecomm-android-sdk-1.02'
+    // Needed for AppsFlyer
+    compile name: 'AF-Android-SDK'
+    // Needed for Parsing json issues
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.retrofit:retrofit:1.6.1'
+    compile 'org.parceler:parceler:0.2.13'
+    // Needed for event bus
+    compile 'com.squareup:otto:1.3.5'
+    // Needed for ripple effect on OrderActivity
+    compile 'com.skyfishjy.ripplebackground:library:1.0.1'
+    // Needed for image handling
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // Needed for CropActivity
+    compile 'com.lyft:scissors:1.0.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'io.reactivex:rxjava:1.0.15'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    // Others
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.wefika:flowlayout:0.4.1'
+    // Needed for FB SDK
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    // Needed for Zoom On Image
+    compile 'com.commit451:PhotoView:1.2.4'
+    // Needed for intro
+    compile 'com.heinrichreimersoftware:material-intro:1.1'
+    // Needed for Tip Toggle-Switch
+    compile 'org.honorato.multistatetogglebutton:multistatetogglebutton:0.2.1'
+    // Needed for Cancel strip
+    compile 'net.wujingchao.android.view:simple-tag-imageview:1.0.1'
+    // Needed for CC form
+    compile 'com.github.davidbeloo:creditcardform:1.0.0'
+    // Needed for CircleImageView
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.github.techery:ProperRatingBar:0.0.4'
+    apply plugin: 'com.google.gms.google-services'
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#55b4db</color>
+    <color name="color_primary_dark">#2FA8D8</color>
+    <color name="color_accent">#f24e94</color>
+
+    <color name="gray">#666666</color>
+    <color name="light_gray">#E2E2E2</color>
+    <color name="dark_gray">#222222</color>
+    <color name="background_gray">#F7F7F7</color>
+
+    <!--Filter colors-->
+    <color name="filter_drawer_background">#FFFFFFFF</color>
+    <color name="divider">#1F000000</color>
+    <color name="filter_text">#444444</color>
+
+    <color name="green">#6dad57</color>
+    <color name="red">#EB4646</color>
+    <color name="red_dark">#C13A3A</color>
+    <color name="light_blue">#DEECF9</color>
+
+    <color name="transparent_black">#B3000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_white">#59FFFFFF</color>
+    <color name="transparent_white_1">#CCFFFFFF</color>
+    <color name="transparent_white_2">#DDFFFFFF</color>
+    <color name="transparentBlackStart">#66000000</color>
+    <color name="transparentBlackMedium">#22000000</color>
+
+    <!--Dashboard colors-->
+    <color name="dashboard_income">#6dad57</color>
+    <color name="dashboard_radius">#66c8c9</color>
+    <color name="dashboard_orders">#f1b144</color>
+    <color name="dashboard_delivery">#b088be</color>
+
+    <!--Intro colors-->
+    <color name="intro_1">#a3d3d0</color>
+    <color name="intro_2">#e2c0cf</color>
+    <color name="intro_3">#a5d392</color>
+    <color name="intro_4">#fbb16d</color>
+
+
+
+
+    <color name="hashtag_purple">#EFBDEC</color>
+    <color name="hashtag_turquoise">#B4F3E0</color>
+    <color name="hashtag_pink">#FFC1C8</color>
+    <color name="hashtag_blue">#C1DDFF</color>
+    <color name="hashtag_yellow">#FFE5A7</color>
+
+
+
+</resources>

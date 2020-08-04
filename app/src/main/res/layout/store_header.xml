@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/itemContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    tools:ignore="MissingPrefix"
+    card_view:cardElevation="3dp"
+    tools:showIn="@layout/content_store">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_place_holder_store"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="0dp"
+                          android:layout_weight="1">
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:gravity="center_vertical"
+                              android:orientation="vertical"
+                              android:paddingLeft="12dp"
+                              android:paddingStart="12dp">
+
+                    <TextView
+                        android:id="@+id/itemNameTextView"
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|bottom"
+                        android:maxLines="1"
+                        android:text="@string/shop_name"
+                        android:textColor="@color/dark_gray"
+                        android:textDirection="locale"
+                        android:textSize="20sp"/>
+
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:orientation="horizontal">
+                        <RatingBar
+                            android:id="@+id/storeRatingBar"
+                            style="@style/CustomRatingBarSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:numStars="5"/>
+
+                        <TextView
+                            android:id="@+id/reviewsCounterTextView"
+                            fontPath="fonts/opensans_light.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:gravity="top"
+                            android:maxLines="1"
+                            android:text="@string/number_of_reviews"
+                            android:textColor="@color/gray"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View android:layout_width="1dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/light_gray"/>
+
+                <ImageButton
+                    android:id="@+id/smsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_sms"/>
+
+                <View android:layout_width="1dp"
+                      android:layout_height="match_parent"
+                      android:background="@color/light_gray"/>
+
+                <ImageButton
+                    android:id="@+id/callButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_ripple"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_phone"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/light_gray"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:padding="4dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clock"/>
+
+                <TextView
+                    android:id="@+id/storeEtaTextView"
+                    fontPath="fonts/opensans_light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/avg_eta"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_delivery"/>
+
+                <TextView
+                    android:id="@+id/deliveryPriceEditText"
+                    fontPath="fonts/opensans_light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginStart="2dp"
+                    android:maxLines="1"
+                    android:text="@string/delivery_price_with_value"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

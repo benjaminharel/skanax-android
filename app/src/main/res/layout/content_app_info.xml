@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="co.thenets.brisk.activities.AppInfoActivity"
+    tools:ignore="MissingPrefix"
+    tools:showIn="@layout/fragment_app_info">
+
+    <TextView
+        android:id="@+id/privacyPolicyTextView"
+        style="@style/AppInfoItem"
+        fontPath="fonts/opensans_light.ttf"
+        android:background="@drawable/bg_ripple_white_background_rounded"
+        android:text="@string/privacy_policy"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <TextView
+        android:id="@+id/tacTextView"
+        style="@style/AppInfoItem"
+        fontPath="fonts/opensans_light.ttf"
+        android:background="@drawable/bg_ripple_white_background_rounded"
+        android:text="@string/terms_and_conditions"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <TextView
+        android:id="@+id/tacBriskerTextView"
+        style="@style/AppInfoItem"
+        fontPath="fonts/opensans_light.ttf"
+        android:background="@drawable/bg_ripple_white_background_rounded"
+        android:text="@string/terms_and_conditions_brisker"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <TextView
+        android:id="@+id/appVersionTextView"
+        style="@style/AppInfoItem"
+        fontPath="fonts/opensans_light.ttf"
+        android:text="@string/version"/>
+
+</LinearLayout>
+

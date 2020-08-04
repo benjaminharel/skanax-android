@@ -1,0 +1,53 @@
+{
+  "project_info": {
+    "project_number": "920555850576",
+    "firebase_url": "https://aesthetic-rush-113706.firebaseio.com",
+    "project_id": "aesthetic-rush-113706",
+    "storage_bucket": "aesthetic-rush-113706.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920555850576:android:7605b6b808ffc4eb",
+        "android_client_info": {
+          "package_name": "co.thenets.brisk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920555850576-kppfq756gbri7s8q30qiqcni9bfcbb14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.thenets.brisk",
+            "certificate_hash": "DEA6BE16D454C5CBB353855C3DBC26CD316859BF"
+          }
+        },
+        {
+          "client_id": "920555850576-cqruei3pmobs4ftmmbs34uefo53gv5av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqftPDEb_XpbpH1Pc6z71P32PGyS5HhmQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-59119125-5"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

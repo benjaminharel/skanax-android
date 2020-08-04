@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/itemContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    card_view:cardCornerRadius="2dp"
+    tools:ignore="MissingPrefix">
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/store_short_header_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_ripple_white_background"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/ic_place_holder_store"
+                    card_view:civ_border_color="#FF000000"
+                    card_view:civ_border_width="0dp"/>
+
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:gravity="center_vertical"
+                              android:orientation="vertical"
+                              android:padding="12dp">
+                    <TextView
+                        android:id="@+id/itemNameTextView"
+                        fontPath="fonts/opensans_bold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/store_name"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content">
+                        <io.techery.properratingbar.ProperRatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:prb_defaultRating="0"
+                            app:prb_tickNormalDrawable="@drawable/ic_star_small_gray"
+                            app:prb_tickSelectedDrawable="@drawable/ic_star_small_yellow"
+                            app:prb_totalTicks="5"/>
+                        <TextView
+                            android:id="@+id/reviewsCounterTextView"
+                            fontPath="fonts/opensans_light.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:gravity="left|start|center_vertical"
+                            android:maxLines="1"
+                            android:text="@string/number_of_reviews"
+                            android:textColor="@color/gray"
+                            android:textSize="10sp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/actionLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+                    <ImageView
+                        android:id="@+id/etaImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:src="@drawable/ic_delivery_time_bike"/>
+
+                    <TextView
+                        android:id="@+id/etaTextView"
+                        fontPath="fonts/opensans_regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/avg_eta"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background_gray"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/closedNowView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_white_1"/>
+    </FrameLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
+

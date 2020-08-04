@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="co.thenets.brisk.activities.SplashActivity"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/ratingBarTextView"
+        fontPath="fonts/opensans_light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/how_brisk_app_works"
+        android:textColor="@color/color_primary"
+        android:textSize="28sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_customer_guide"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:paddingBottom="32dp"
+                              android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="48sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@color/dark_gray"/>
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/select_category_and_search_product"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1">
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:paddingTop="32dp"
+                              android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="48sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@color/dark_gray"/>
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/add_to_shopping_bag_and_compare_shops"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:paddingTop="32dp"
+                              android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="48sp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="32dp"
+                        android:background="@color/dark_gray"/>
+
+                    <TextView
+                        fontPath="fonts/opensans_light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/order_and_the_products_are_on_the_way"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/openAStoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_cornered_ripple"
+        android:text="@string/share_location_and_start"
+        android:textColor="@color/white"/>
+</LinearLayout>

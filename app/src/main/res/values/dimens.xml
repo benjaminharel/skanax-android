@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <!--font sizes-->
+    <dimen name="grid_product_item_name_font_size">16sp</dimen>
+    <dimen name="grid_product_item_brand_font_size">12sp</dimen>
+    <dimen name="grid_product_item_price_font_size">14sp</dimen>
+    <dimen name="drawer_text_size">18sp</dimen>
+
+    <!--crop activity-->
+    <dimen name="crop_fab_margin">0dp</dimen>
+    <dimen name="pick_mini_fab_margin">8dp</dimen>
+
+    <!--dashboard values-->
+    <dimen name="dashboard_section_title">24sp</dimen>
+    <dimen name="dashboard_section_subtitle">16sp</dimen>
+
+    <dimen name="store_short_header_height">64dp</dimen>
+
+</resources>

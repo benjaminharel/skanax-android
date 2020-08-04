@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stores"
+            android:icon="@drawable/ic_categories"
+            android:title="@string/stores"/>
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="@string/my_orders"/>
+    </group>
+
+    <item android:title="@string/more">
+        <menu>
+            <item
+                android:id="@+id/nav_share_us"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="@string/share_us"/>
+
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/ic_rate_review_black_24dp"
+                android:title="@string/rate_us"/>
+
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_info"
+                android:title="@string/app_info"/>
+
+            <item
+                android:id="@+id/nav_customer_service"
+                android:icon="@drawable/ic_customer_service"
+                android:title="@string/customer_service_247"/>
+
+            <item
+                android:id="@+id/nav_customer_action"
+                android:icon="@drawable/ic_become_brisker"
+                android:title="@string/open_a_brisk_shop"/>
+        </menu>
+    </item>
+
+</menu>
+
+

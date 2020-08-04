@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp"
+        android:src="@drawable/intro_4"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:layout_marginBottom="32dp"
+                  android:layout_weight="0.6">
+    <TextView
+        android:id="@+id/itemNameTextView"
+        fontPath="fonts/opensans_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/intro_4_title"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:textSize="28dp"/>
+
+    <Button
+        android:id="@+id/compareStores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_ripple_white_background_rounded"
+        android:text="@string/become_brisker"
+        android:onClick="actionButtonClicked"
+        android:padding="8dp"
+        android:textColor="@color/intro_4"/>
+    </LinearLayout>
+
+</LinearLayout>

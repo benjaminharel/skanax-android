@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/tools"
+             xmlns:card_view="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_map"/>
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/searchingRipple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        card_view:rb_color="@color/color_primary_dark"
+        card_view:rb_duration="5000"
+        card_view:rb_radius="32dp"
+        card_view:rb_rippleAmount="4"
+        card_view:rb_scale="6">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_place_holder_user"
+            card_view:civ_border_color="@color/white"
+            card_view:civ_border_overlay="false"
+            card_view:civ_border_width="4dp"/>
+
+
+    </com.skyfishjy.library.RippleBackground>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center"
+                  android:orientation="vertical">
+        <TextView
+            android:id="@+id/titleTextView"
+            fontPath="fonts/opensans_regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="@string/we_are_looking_for_available_stores_next_to_you_please_enable_location_services"
+            android:textColor="@color/color_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:visibility="invisible"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_place_holder_user"
+            card_view:civ_border_color="@color/white"
+            card_view:civ_border_overlay="false"
+            card_view:civ_border_width="4dp"/>
+
+        <Button
+            android:id="@+id/enableLocationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/bg_cornered_ripple"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/enable_location_services"
+            android:textColor="@color/white"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

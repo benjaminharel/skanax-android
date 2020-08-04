@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/topLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <co.thenets.brisk.custom.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <co.thenets.brisk.custom.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </co.thenets.brisk.custom.CameraSourcePreview>
+
+    </LinearLayout>
+
+    <!--Scan Product -->
+    <FrameLayout
+        android:id="@+id/scanProductFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@color/transparent_black"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="@string/scan_to_add_product"
+                android:textColor="@color/color_primary"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/barcodeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:src="@drawable/ic_scan_product"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <!-- Frame when Product Found -->
+    <LinearLayout
+        android:id="@+id/productFoundFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="-16dp"
+            android:text="@string/product_found"
+            android:textColor="@color/color_primary"
+            android:textSize="28sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_margin="16dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/itemProductImage"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder_product"/>
+
+                <TextView
+                    android:id="@+id/itemNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="Diet Coke Cola, 24 oz"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"/>
+                <!--android:paddingTop="8dp"-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/itemFromPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:paddingLeft="24dp"
+                        android:text="From"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/itemMarketPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingRight="24dp"
+                        android:text="$2.89"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+
+                <!--android:layout_gravity="bottom|end"-->
+
+                <!-- -->
+
+            </LinearLayout>
+
+            <!-- The following View represent the content. Note the margin -->
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="18dp"-->
+            <!--android:background="#44aa00"-->
+            <!--/>-->
+
+            <!--android:layout_width="64dp"-->
+            <!--android:layout_height="96dp"-->
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="96dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginEnd="88dp"
+                android:layout_marginRight="88dp"
+                android:layout_marginTop="32dp"
+
+
+                android:src="@drawable/ic_product_found"/>
+            <!--<ImageButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:background="#ff0000"-->
+            <!--android:src="@android:drawable/ic_menu_close_clear_cancel"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <!--<FrameLayout-->
+    <!--android:id="@+id/productFoundFrameLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="visible">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:paddingBottom="16dp"-->
+    <!--android:text="@string/product_found"-->
+    <!--android:textColor="@color/colorPrimary"-->
+    <!--android:textSize="24sp"-->
+    <!--/>-->
+
+    <!--&lt;!&ndash;<FrameLayout&ndash;&gt;-->
+    <!--<FrameLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="-18dp"-->
+    <!--android:background="@color/white">-->
+
+    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/itemProductImage"-->
+    <!--android:layout_width="96dp"-->
+    <!--android:layout_height="96dp"-->
+    <!--android:layout_gravity="center_horizontal|center"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="8dp"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/ic_sample_product"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/itemNameText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="left"-->
+    <!--android:padding="8dp"-->
+    <!--android:paddingLeft="16dp"-->
+
+    <!--android:text="Diet Coke Cola, 24 oz"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="12sp"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/itemFromPriceTextView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:padding="8dp"-->
+    <!--android:paddingLeft="16dp"-->
+    <!--android:text="From"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textStyle="bold"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/itemMarketPriceTextView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:paddingLeft="2dp"-->
+    <!--android:text="$2.89"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textStyle="bold"-->
+    <!--/>-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--&lt;!&ndash;android:layout_gravity="bottom|end"&ndash;&gt;-->
+
+    <!--&lt;!&ndash; &ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--&lt;!&ndash;android:layout_marginBottom="-32dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginEnd="-32dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginRight="-32dp"&ndash;&gt;-->
+
+    <!--</FrameLayout>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:layout_gravity="bottom|right"-->
+    <!--android:src="@drawable/bg_product_found"/>-->
+
+    <!--</LinearLayout>-->
+    <!--&lt;!&ndash;android:layout_marginLeft="240dp"&ndash;&gt;-->
+
+    <!--</FrameLayout>-->
+</FrameLayout>
+    <!--</LinearLayout>-->
